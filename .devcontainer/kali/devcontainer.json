@@ -1,0 +1,9 @@
+{
+  "name": "Kali",
+  "build": { "dockerfile": "Dockerfile" },
+  "remoteUser": "vscode",
+  "hostRequirements": { "cpus": 4 },
+  "capAdd": ["NET_RAW", "NET_ADMIN", "SYS_PTRACE"],
+  "securityOpt": ["seccomp=unconfined"],
+  "postStartCommand": "sudo service ssh start"
+}
