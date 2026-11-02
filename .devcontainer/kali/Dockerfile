@@ -1,7 +1,6 @@
 FROM kalilinux/kali-rolling
 ENV DEBIAN_FRONTEND=noninteractive
 
-# Базовые + Практика 1 (Linux) + Практика 3 (SSH/GPG/SSL)
 RUN apt-get update && apt-get install -y --no-install-recommends \
     sudo git curl wget nano vim zsh less file ca-certificates \
     openssh-server openssh-client gnupg openssl \
@@ -9,7 +8,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     procps dnsutils whois netcat-traditional libpam-pwquality john \
     && rm -rf /var/lib/apt/lists/*
 
-# Аналіз ШПЗ (Linux-частина)
 RUN apt-get update && apt-get install -y --no-install-recommends \
     python3 python3-pip python3-dev build-essential libfuzzy-dev libmagic1 \
     gdb radare2 nasm binutils yara ssdeep libimage-exiftool-perl \
