@@ -1,0 +1,1 @@
+{"name":"Kali","image":"kalilinux/kali-rolling","remoteUser":"root","postCreateCommand":"bash .devcontainer/setup.sh"}
