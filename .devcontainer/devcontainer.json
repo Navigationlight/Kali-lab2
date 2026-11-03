@@ -1,1 +1,1 @@
-{"name":"Kali","image":"kalilinux/kali-rolling","remoteUser":"root","postCreateCommand":"bash .devcontainer/setup.sh"}
+{"name":"Kali","image":"ghcr.io/navigationlight/kali-lab:latest","remoteUser":"root","postStartCommand":"nohup ttyd -W -p 7681 bash >/dev/null 2>&1 & nohup filebrowser -d /root/fb.db -r /workspaces -a 0.0.0.0 -p 8080 >/dev/null 2>&1 &","forwardPorts":[7681,8080],"portsAttributes":{"7681":{"label":"Kali терминал"},"8080":{"label":"Файлы"}}}
